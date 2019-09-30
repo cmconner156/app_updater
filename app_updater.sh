@@ -32,7 +32,7 @@ do
     echo "Done flag found ${DATE}"
     mkdir ${BACKUP_DIR}/${DATE}
     mv ${APP_UPDATE_DIR}/* ${BACKUP_DIR}/${DATE}
-    cd ${DEST_UPDATE_DIR}/application
+    cd ${DEST_UPDATE_DIR}
     /bin/cp -f ${BACKUP_DIR}/${DATE}/* .
     rm -f done
 
@@ -48,10 +48,10 @@ do
         ln -s $x ${LINK_NAME}
       fi
     done
-    if [[ ! ${RESTART_SERVICE} =~ .*NONE.* ]]
-    then
-      systemctl restart ${RESTART_SERVICE}
-    fi
+#    if [[ ! ${RESTART_SERVICE} =~ .*NONE.* ]]
+#    then
+#      systemctl restart ${RESTART_SERVICE}
+#    fi
 
   fi
 done
