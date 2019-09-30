@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
 
 #Copy supervisor conf and app
-COPY app_updater-supervisord.conf /etc/supervisor/conf.d/app_updater-supervisord.conf
+COPY app-updater-supervisord.conf /etc/supervisor/conf.d/app-updater-supervisord.conf
 COPY app_updater.sh /app_updater.sh
 
 # volumes
