@@ -20,6 +20,6 @@ VOLUME /backups
 ENV APP_UPDATE_DIR /app_update
 ENV DEST_UPDATE_DIR /dest_update
 ENV BACKUP_DIR /backups
-ENV RESTART_SERVICE
+ENV RESTART_SERVICE NONE
 
 CMD ["/usr/bin/supervisord"]

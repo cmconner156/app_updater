@@ -51,7 +51,7 @@ do
         ln -s $x ${LINK_NAME}
       fi
     done
-    if [[ ! -z ${RESTART_SERVICE} ]]
+    if [[ ! ${RESTART_SERVICE} =~ .*NONE.* ]]
     then
       systemctl restart ${RESTART_SERVICE}
     fi
