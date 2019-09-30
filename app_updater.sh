@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 APP_UPDATE_DIR=$1
 
@@ -23,8 +22,6 @@ then
 fi
 
 RESTART_SERVICE=$4
-
-exit 0
 
 while [ 1 ]
 do
