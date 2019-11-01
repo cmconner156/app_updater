@@ -28,6 +28,7 @@ do
 
   if [[ -f ${APP_UPDATE_DIR}/done ]]
   then
+    sleep 5
     DATE=$(date '+%Y%m%d-%H%M%S')
     echo "Done flag found ${DATE}"
     mkdir ${BACKUP_DIR}/${DATE}
