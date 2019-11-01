@@ -33,7 +33,7 @@ do
     mkdir ${BACKUP_DIR}/${DATE}
     mv ${APP_UPDATE_DIR}/* ${BACKUP_DIR}/${DATE}
     cd ${DEST_UPDATE_DIR}
-    /bin/cp -f ${BACKUP_DIR}/${DATE}/* .
+    /bin/cp -f -r ${BACKUP_DIR}/${DATE}/* .
     rm -f done
 
     for x in $(ls *python-37*)
